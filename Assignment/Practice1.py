@@ -22,7 +22,21 @@ def vector_addition(v1, v2):
 # given two lists of integers, find a slice in list 1 and a slice in list 2 whose sums are equal
 # using enumeration is fine
 def find_equal_sum_slice(list1, list2):
-    return
+    dic1={}
+    dic2={}
+    def operation(begin,end,listno,dicno):
+        for j in range(end):
+            l,r=begin,end+1-j
+            for i in range(r+1):
+                while l<r:
+                    s1=sum(listno[l:r])
+                    dicno.update({s1:'{}'.format(listno[l:r])})
+                    l+=1
+    operation(0,len(list1)-1,list1,dic1)
+    operation(0,len(list2)-1,list2,dic2)
+    for key in dic1:
+        if dic2.get(key):
+            print(dic1[key]+'='+dic2[key])
     
 # use a sorting algorithm (your choice) to sort a list of ten unsorted integers. Do not use the python 
  
