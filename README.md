@@ -16,3 +16,6 @@ This is the logo of my favourite basketball team [Denver Nuggets](https://en.wik
 
 ### Machine Learning
 
+![OpenAi](/Trash%20Can/Open%20AI.png)
+
+OpenAi, or precisely OpenAI Five, is a team of five neural networks that has successfully defeated amature DOTA2 players who have achieved the **top 0.5%** last month. OpenAI Five plays 180 years worth of games.
