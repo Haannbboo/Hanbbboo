@@ -1,4 +1,4 @@
-Mark down is so cute...
+################### Mark down is so cute...
 
 
 #### Basic Info
@@ -11,4 +11,5 @@ Mark down is so cute...
 
 #### Something Important
 ![Denver Nuggets](/Trash%20Can/Nuggets.jpg)
+
 This is the logo of my favourite basketball team [Denver Nuggets](https://en.wikipedia.org/wiki/Denver_Nuggets), one of the playoff team in the NBA. I'm pointing this out because this could be a perfect topic for any gifts :gift:.
