@@ -1,0 +1,267 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Chapter 1-3 Reading note\n",
+    "\n",
+    "\n",
+    "## Chapter 1: Getting Started\n",
+    "\n",
+    "- Computer: calculations + memories\n",
+    "    - Super fast calculations and vast storage, but **still not enough** for us\n",
+    "    - Still have limitations\n",
+    "\n",
+    "\n",
+    "- Declarative knowledge: statements & facts <- positive statements in Econ.\n",
+    "- Imperative knowledge: things with 'how', or **recipe**<- normative statements in Econ, **the most important question** in both in CS and Econ. \n",
+    "\n",
+    "\n",
+    "- Algorithm\n",
+    "    > **Steps** \n",
+    "    \n",
+    "    > **Flow of control**: \"when each step is executed\" -> if, for, while...\n",
+    "    \n",
+    "    > **When to STOP**: break, continue, logical endings...\n",
+    "\n",
+    "\n",
+    "- Computers as machine\n",
+    "    - Fixed program computer\n",
+    "        - Calculator, cloth washer, AC controller...\n",
+    "        - Programs can't be written in after the production, usually have limited functions.\n",
+    "    - Stored program computer\n",
+    "        - CPU, USB, iMac...\n",
+    "        - Can give instructions into the computer which stores and executes instructions\n",
+    "        - **Interpreter**: executes each instruction in _order_ -> order: _program counter_ inside the _control unit_\n",
+    "     \n",
+    "\n",
+    "- Creating _Recipe_\n",
+    "    - a **Programming language** provides sets of primitive **operations**\n",
+    "    - _**Expressions**_: legal combination of primitives\n",
+    "        - Syntax: 语法\n",
+    "            - Eng: SVO\n",
+    "            - Programming: 3.2*5, \"string\"+3 (despite it's wrong, but this is the issue of static semantics not syntax)...\n",
+    "        - Static Semantics: 静态语义\n",
+    "            - Eng: \"I are hungry\" <-> \"I am hungry\"\n",
+    "            - Programming: 3.2*5, \"string\"+\"another string\"\n",
+    "        - Semantics: 语义\n",
+    "            - Eng: puns, different meanings, sarcasms...\n",
+    "            - Programming: must be only **one meaning** (may not be what we want)\n",
+    "        - Syntax error & static semantic error (both are easy to debug), no semantic error but have unintended output (hard to debug)\n",
+    "    - expressions and computations have **values** and meanings in a programming language.\n",
+    "    \n",
+    "    \n",
+    "## Chapter 2: Introduction to Python\n",
+    "\n",
+    "- Programming languages\n",
+    "    - Low-level & high-level\n",
+    "        - Low-level: 01010101010\n",
+    "        - High-level: using more abstract operation\n",
+    "    - General & Targeted\n",
+    "    - Intepreted & Compiled: **source code** is executed **directly** (by intepreter) or first **converted** (by a compiler) into low-level programs\n",
+    "\n",
+    "\n",
+    "- Python Programs\n",
+    "    - _Program_: sequence of **definitions** and **commands**\n",
+    "    - _Command_: instructions for interpreter\n",
+    "    - Executed in _**Shell**_\n",
+    "\n",
+    "- Objects <- type\n",
+    "    - **Scalar**\n",
+    "        - int: integers: 5,2,34...\n",
+    "        - float: real numbers: 3.64, 3.14159238530589\n",
+    "        - bool: **Bolean** value: _Ture_ & _False_\n",
+    "        - NoneType: **special** and have no value: None\n",
+    "        - type(): see the type of an object"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "type(5), type(3.1), type(True), type(None)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- Type Convertion\n",
+    "    - float(): converts _int_ to _float_"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "float(3),float(203)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "    - int(): truncates float to int"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "int(3.9)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- Print( ): show output from a code"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "3+2\n",
+    "print(3+2)\n",
+    "print(sum([1,2,3,4,5]))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- Expressions\n",
+    "    - **combine onjects and operators** to form expressions\n",
+    "    - An expression has a **value**, which has a **type** -> can use _type( )_ to check out!\n",
+    "    - syntax: <object> <operator> <object> -> 3+2\n",
+    "\n",
+    "- Binding\n",
+    "    - **equal sign \"=\"** is an **assignment** of a _value_ to a _variable name_\n",
+    "        - pi=3.14\n",
+    "        - note=\"sucks\"\n",
+    "    - _**Can't be key words**_ <- super important\n",
+    "    - Names: notes for what is happening in the expression & easy to invoke\n",
+    "    - Re-bing:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "pi=3.14\n",
+    "radius=2.2\n",
+    "print(radius)\n",
+    "area=pi*(radius**2)\n",
+    "radius=radius+1\n",
+    "print(radius,area)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "- And, or, not\n",
+    "    - And: True if **both** are true\n",
+    "    - Or: True if **either or both** are true\n",
+    "    - Not: Inverse Ture<->False\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Branching programs\n",
+    "\n",
+    "\n",
+    "- If\n",
+    "    - a block executed if TRUE\n",
+    "    - another executed if FALSE\n",
+    "    - **Important**: when expressing \"if a is **equal** to b\", we use == instead of =\n",
+    "    - Elif: =else if -->> execute if \"if\" is false; won't be executed if \"if\" is Ture\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a=int(input(\"Type in a number: \"))\n",
+    "if a>=10:\n",
+    "    print(\"Greater than 10\")\n",
+    "elif a==10:\n",
+    "    print(\"Equal to 10\")\n",
+    "else:\n",
+    "    print(\"Smaller than 10\")\n",
+    "print(\"IF is over\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
