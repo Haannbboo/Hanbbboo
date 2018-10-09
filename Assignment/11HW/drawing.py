@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Spyder Editor
-
-This is a temporary script file.
-"""
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -14,10 +9,8 @@ def insertion_sort(list1):
     n=len(list1)
     for i in range(n):
         for j in range(i):
-            print(list1[i],list1[j])
             if list1[i]<list1[j]:
                 list1.insert(j,list1.pop(i))
-                print(list1)
                 break
     return list1
 
