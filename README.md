@@ -1,5 +1,8 @@
 ###### Mark down is so cute...
 
+#**VERY IMPORTANT**#
+
+**THIS RESPORITERY IS ONLY FOR IB CS HL LEARNING, EVERYTHING WITHIN IS INTUITIVE AND DOES NOT REPRESENT THE ACTUAL WORK I'M DOING**
 
 ### Basic Info
 
@@ -8,6 +11,8 @@
 > Age: 16
 
 > Interests: machine learning (Open AI etc.)
+
+#**VERY IMPORTANT**#
 
 ### Something Important
 ![Denver Nuggets](/Trash%20Can/Nuggets.jpg)
