@@ -87,6 +87,17 @@ class student(object):
             else:
                 self.level.update({self.courses[i]:'D'})
         return self.level
+class IBStudent(student):
+    def __init__(self,core=['CAS','EE','IA'],coreGrades=[]):
+        student.__init__(self)
+        self.core=core
+        self.coreGrades=coreGrades
+    def getCore(self):
+        return self.core
+    def addCoreGrades(self):
+        for i in self.core:
+            self.coreGrades.append(input(i+" completion: "))
+        return self.coreGrades
     
 def test():
     a=student('Hanbo','17','Male','S2C7',['Math','Eng','Econ','CS'])
