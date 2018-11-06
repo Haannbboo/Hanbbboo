@@ -34,8 +34,8 @@ class sorting(object):
         Return sorted list1 with bubble sort'''
         n=len(list1)
         for i in range(n):
-            for j in range(i, n):
-                if list1[i]>list1[j]:
+            for j in range(i):
+                if list1[i]<list1[j]:
                     list1[i],list1[j]=list1[j],list1[i]
                     if output:
                         print(list1)
@@ -83,8 +83,8 @@ class sorting(object):
                 while l<r and list1[l]<=pivot:
                     l+=1
                 list1[l],list1[r]=list1[r],list1[l]
-            if output:
-                print(list1)
+                if output:
+                    print(list1)
             list1[l],list1[left]=pivot,list1[l]
             sorting(left,l-1)
             sorting(r+1,right)
