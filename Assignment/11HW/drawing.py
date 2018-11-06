@@ -21,8 +21,8 @@ def selection(list1):
     Return sorted list1 with selection sort'''
     for i in range(len(list1)):
         x=i
-        for j in range(1,len(list1)):
-            if list1[j]<list1[i]:
+        for j in range(i,len(list1)):
+            if list1[j]<list1[x]:
                 x=j
         list1[i],list1[x]=list1[x],list1[i]
     return list1

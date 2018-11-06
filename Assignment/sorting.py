@@ -1,9 +1,8 @@
 import numpy
 import time
-import unittest
 
 class sorting(object):
-    def insertion(list(list1)):
+    def insertion(list1,output=False):
         '''list1 -> list object
         Return sorted list1 with insertion sort'''
         n=len(list1)
@@ -12,21 +11,25 @@ class sorting(object):
             for j in range(i):
                 if list1[i] < list1[j]:
                     insert(j, pop(i))
+                    if output:
+                        print(list1)
                     break
 
-    def selection(list1):
+    def selection(list1,output=False):
         '''list1 -> list object
         Return sorted list1 with selection sort'''
         n=len(list1)
         for i in range(n):
             x=i
-            for j in range(1,n):
-                if list1[j]<list1[i]:
+            for j in range(i,n):
+                if list1[j]<list1[x]:
                     x=j
             list1[i],list1[x]=list1[x],list1[i]
+            if output:
+                print(list1)
         return list1
 
-    def bubble(list(list1)):
+    def bubble(list1,output=False):
         '''list1 -> list object
         Return sorted list1 with bubble sort'''
         n=len(list1)
@@ -34,9 +37,11 @@ class sorting(object):
             for j in range(i, n):
                 if list1[i]>list1[j]:
                     list1[i],list1[j]=list1[j],list1[i]
+                    if output:
+                        print(list1)
         return list1
 
-    def merge(list(list1)):
+    def merge(list1,output=False):
         '''list1 -> list object
         Return sorted list1 with merge sort'''
         def alg(a,b):
@@ -52,6 +57,8 @@ class sorting(object):
                 result+=a
             elif len(b)!=0:
                 result+=b
+            if output:
+                print(result)
             return result    
         def merge_sort(list1):
             n=len(list1)
@@ -63,7 +70,7 @@ class sorting(object):
             return alg(a,b)
         merge_sort(list1)
 
-    def quick(list(list1)):
+    def quick(list1,output=False):
         n=len(list1)
         def sorting(left,right):
             if left>right:
@@ -76,10 +83,14 @@ class sorting(object):
                 while l<r and list1[l]<=pivot:
                     l+=1
                 list1[l],list1[r]=list1[r],list1[l]
+            if output:
+                print(list1)
             list1[l],list1[left]=pivot,list1[l]
             sorting(left,l-1)
             sorting(r+1,right)
         sorting(0,n-1)
         return list1
+
+        
 
         
