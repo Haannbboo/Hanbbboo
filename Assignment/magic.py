@@ -1,4 +1,6 @@
 import numpy
+import os
+
 
 def Qone(K=3,P=1):
     while K>1:
@@ -55,3 +57,12 @@ class magic(object):
             m[h][v]=z
             #print(m)
         return m
+
+
+
+
+##########
+    #Play part
+##########
+
+realPath=os.path.realpath(__file__)
