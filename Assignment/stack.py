@@ -33,5 +33,22 @@ class stack:
     def __str__(self):
         return str(self.result)
 
+def parChecker(sample):
+    '''parChecker(sampleString) -> boolean -- see if the parenthesis is paired'''
+    s=stack()
+    for i in sample:
+        if i=='(':
+            s.push(i)
+        else:
+            if s.isEmpty():
+                return False
+            else:
+                s.pop()
+    if s.isEmpty():
+        return True
+    else:
+        return False
 
-
+print(parChecker('((()'))
+print(parChecker('(()()())()((()()))'))
+print(parChecker('())()'))
