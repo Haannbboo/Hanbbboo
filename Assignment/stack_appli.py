@@ -24,9 +24,16 @@ def parChecker(sample):
 def revString(string):
     '''revString(string) -> string -- reverse the string'''
     s=Stack()
-    for i in string:
+    for i in str(string):
         s.push(i)
     out=''
     while not s.isEmpty():
         out+=s.pop()
     return out
+print('Test parChekcer')
+print('True: '+str(parChecker('(()()())(()())((()))')))
+print('False: '+str(parChecker('((()(())())')))
+print('False: '+str(parChecker('(()))()))'))+'\n')
+print('Test revString')
+print(revString('Hanbo'))
+print(revString(123))
