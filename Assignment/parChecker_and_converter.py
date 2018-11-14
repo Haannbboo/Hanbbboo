@@ -2,7 +2,7 @@
 
 @Haannbboo
 Created at Nov.14th
-:parCheck
+:parChecker and converter
 
 '''
 import unittest
