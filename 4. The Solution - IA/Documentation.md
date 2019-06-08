@@ -29,7 +29,7 @@ python setup.py install
 ```
 
 ## Dependency
-- Python 3.x
+- Python 3.4 or more
 - For data collection
   - [requests](https://2.python-requests.org//en/master/)
   - [pyquery](https://pyquery.readthedocs.io/en/latest/)
