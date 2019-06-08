@@ -9,7 +9,7 @@ _Contact: hbopublic@163.com_
 
 ## What's this
 
-**JAQK** is a Python package providing light and robust data collection for quantitative analysis for US stocks. JAQK aims to tackle the problem of gathering financial data for high school students, and we hope JAQK can help the intro level of quantitative analysis. 
+**JAQK** is a Python tookit providing light and robust data collection and data processing for quantitative analysis for US stocks. JAQK aims to tackle the problem of gathering financial data for high school students, and we hope JAQK can help some basic level of quantitative analysis. 
 
 ## Installations
 For quick installation with **PyPI**:
